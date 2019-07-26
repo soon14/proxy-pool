@@ -27,7 +27,7 @@
         <webmagic.version>0.7.4-SNAPSHOT</webmagic.version>
         <lombok.version>1.18.6</lombok.version>
 
-        <docker.image.prefix>${groupId}</docker.image.prefix>
+        <docker.image.prefix>${parent.groupId}</docker.image.prefix>
 
     </properties>
 
