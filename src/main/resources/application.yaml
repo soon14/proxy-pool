@@ -1,0 +1,23 @@
+spring:
+  # json日期默认格式
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  profiles:
+    active: @env@
+swagger:
+  enabled: false
+proxy-pool:
+  #启用的Processor
+  enableProcessors: 1,2,3,4
+  # 是否启用检测功能
+  enableCheck: true
+  checkProxy:
+    # 本次结束到下次开始间隔毫秒数
+    fixedDelay: 10000
+  cleanProxy:
+    # 本次结束到下次开始间隔毫秒数
+    fixedDelay: 600000
+logging:
+  config: classpath:logback-@env@.xml

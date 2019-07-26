@@ -1,0 +1,17 @@
+<!--配置debug=true,从而打印任何内部状态下的信息-->
+<configuration debug="true">
+
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/mnt/logs/proxy-pool.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/mnt/logs/proxy-pool-%d.log</fileNamePattern>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>%d{yyyy-mm-dd HH:mm:ss.SSS} [%thread][%logger{36}] %-5level %line- %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="warn">
+        <appender-ref ref="file"/>
+    </root>
+</configuration>

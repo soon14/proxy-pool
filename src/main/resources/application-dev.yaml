@@ -1,0 +1,15 @@
+spring:
+  data:
+    mongodb:
+      host: frp.harvies.ml
+      port: 22224
+      database: dev
+server:
+  port: 9001
+swagger:
+  enabled: true
+proxy-pool:
+  #启用的Processor
+  enableProcessors: 1,2,3,4
+  # 是否启用检测功能
+  enableCheck: true
