@@ -95,9 +95,9 @@ public class ProxyServiceImpl implements ProxyService {
             query.addCriteria(Criteria.where("port").is(proxyQuery.getPort()));
         }
         /**
-         * 按高可用低延迟排序
+         * 按高存活高可用低延迟排序
          */
-        query.with(Sort.by(Sort.Order.desc("stability"), Sort.Order.asc("delay")));
+        query.with(Sort.by(Sort.Order.desc("survival_days"), Sort.Order.desc("stability"), Sort.Order.asc("delay")));
         return query;
     }
 

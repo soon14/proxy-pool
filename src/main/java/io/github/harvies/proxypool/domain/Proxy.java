@@ -3,6 +3,7 @@ package io.github.harvies.proxypool.domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiParam;
 import lombok.*;
 import org.springframework.data.annotation.Id;
@@ -117,13 +118,22 @@ public class Proxy implements Serializable {
      */
     private boolean google;
 
+    @ApiModelProperty(value = "保存时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     @Field("gmt_create")
     private Date gmtCreate;
 
+    @ApiModelProperty(value = "最后检测时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     @Field("gmt_modified")
     private Date gmtModified;
+
+    /**
+     * 存活天数
+     */
+    @ApiModelProperty(value = "存活天数")
+    @Field("survival_days")
+    private Long survivalDays;
 
     @JsonIgnore
     @ApiParam(hidden = true)

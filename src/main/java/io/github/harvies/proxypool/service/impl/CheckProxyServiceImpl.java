@@ -18,6 +18,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.util.Date;
 import java.util.Objects;
@@ -62,7 +63,8 @@ public class CheckProxyServiceImpl implements CheckProxyService {
                             .inc("stability", -1 * Math.pow(2, checkContinuousFailedNum == null ? 0 : checkContinuousFailedNum))
                     , Proxy.class);
         } else {
-            Update update = Update.update("gmt_modified", Date.from(Instant.now()));
+            Date nowDate = new Date();
+            Update update = Update.update("gmt_modified", nowDate);
             updateResult = mongoTemplate.updateFirst(query
                     , update
                             .set("delay", proxyResult.getDelay())
@@ -77,6 +79,7 @@ public class CheckProxyServiceImpl implements CheckProxyService {
                             .set("google", proxyResult.isGoogle())
                             //连续失败数归零
                             .set("check_continuous_failed_num", 0)
+                            .set("survival_days", Duration.between(proxy.getGmtCreate().toInstant(), nowDate.toInstant()).toDays())
                             //匿名检测
                             .set("anonymous_level",
                                     Objects.equals(proxyResult.getQuery(), proxy.getIp())
