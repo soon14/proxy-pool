@@ -48,74 +48,90 @@ public class Proxy implements Serializable {
     @Id
     private String id;
 
+    @ApiModelProperty(value = "ip")
     @ApiParam(value = "ip", example = "127.0.0.1", required = true)
     private String ip;
 
+    @ApiModelProperty(value = "端口")
     @ApiParam(value = "端口", example = "1080", required = true)
     private Integer port;
     /**
      * 协议 http https socks
      */
+    @ApiModelProperty(value = "协议")
     @ApiParam(value = "协议", example = "http", required = true)
     private String protocol;
     /**
      * 匿名级别
      */
+    @ApiModelProperty(value = "匿名级别")
     @Field("anonymous_level")
     private String anonymousLevel;
     /**
      * 国家
      */
+    @ApiModelProperty(value = "国家")
     private String country;
     /**
      * 国家代码
      */
+    @ApiModelProperty(value = "国家代码")
     @Field("country_code")
     private String countryCode;
     /**
      * 地区
      */
+    @ApiModelProperty(value = "地区")
     @Field("region_name")
     private String regionName;
     /**
      * 城市
      */
+    @ApiModelProperty(value = "城市")
     private String city;
     /**
      * 延迟
      */
+    @ApiModelProperty(value = "延迟毫秒数")
     @Indexed
     private Integer delay;
     /**
      * 稳定性
      */
+    @ApiModelProperty(value = "稳定性")
     private Integer stability;
 
     /**
      * 检测连续失败数
      */
+    @ApiModelProperty(value = "检测连续失败数")
     @Field("check_continuous_failed_num")
     private Integer checkContinuousFailedNum;
 
     /**
      * 经度
      */
+    @ApiModelProperty(value = "经度")
     private Double lon;
     /**
      * 纬度
      */
+    @ApiModelProperty(value = "纬度")
     private Double lat;
 
+    @ApiModelProperty(value = "网络提供商")
     private String isp;
 
     /**
      * 来源
      */
+    @ApiModelProperty(value = "来源")
     private Integer origin;
 
     /**
      * 能否上Google
      */
+    @ApiModelProperty(value = "能否上Google")
     private boolean google;
 
     @ApiModelProperty(value = "保存时间")
