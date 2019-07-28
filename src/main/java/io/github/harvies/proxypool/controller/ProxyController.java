@@ -43,7 +43,7 @@ public class ProxyController {
         return PageResult.of(proxyList, availableNum);
     }
 
-    @ApiOperation(value = "随机返回一个可用代理")
+    @ApiOperation(value = "随机获取一个可用代理")
     @GetMapping(value = "/get")
     public Proxy get(ProxyQuery proxyQuery) {
         return proxyService.get(proxyQuery);
