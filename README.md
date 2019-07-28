@@ -34,7 +34,7 @@ docker部署
 
 [WebMagic](https://github.com/code4craft/webmagic)
 
-## 截图
+## 项目截图
 
 ![1564321411483](/home/harvies/IdeaProjects/proxy-pool/images/README/1564321411483.png)
 
@@ -48,12 +48,13 @@ docker部署
 
 > 其他接口见swagger接口文档 http://frp.harvies.ml:22227/doc.html
 
-
+## TODO
+1. 项目maven模块化(方便其他项目依赖)
+2. 增加更多代理网站
 
 ## 演示程序(个人电脑docker容器里的)
 
 http://frp.harvies.ml:22227/proxy/list
-
 
 
 ## docker打包
