@@ -36,9 +36,9 @@ docker部署
 
 ## 项目截图
 
-![1564321411483](/home/harvies/IdeaProjects/proxy-pool/images/README/1564321411483.png)
+![1564321411483](./images/README/1564321411483.png)
 
-![1564321562259](/home/harvies/IdeaProjects/proxy-pool/images/README/1564321562259.png)
+![1564321562259](./images/README/1564321562259.png)
 
 ## 接口
 
