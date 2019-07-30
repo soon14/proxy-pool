@@ -44,7 +44,7 @@ docker部署
 
 ## 接口
 
-### 可用代理列表 http://frp.harvies.ml:22227/proxy/list
+### 可用代理列表 http://frp.harvies.ml:22227/proxy/list?offset=0&limit=10
 
 ### 随机获取一个可用代理 http://frp.harvies.ml:22227/proxy/get
 
