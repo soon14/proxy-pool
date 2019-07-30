@@ -1,3 +1,4 @@
+# FROM openjdk:8-jdk-alpine
 FROM primetoninc/jdk:1.8
 VOLUME ["/mnt","/opt"]
 EXPOSE 9002
