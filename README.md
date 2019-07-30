@@ -65,7 +65,9 @@ http://frp.harvies.ml:22227/proxy/list
 
 rm -rf ~/.m2/repository/io/github/harvies/
  
-sudo mvn  clean install dockerfile:build -DskipTests -Ptest
+sudo mvn clean install -DskipTests
+
+sudo mvn  clean package  dockerfile:build -DskipTests -Ptest
 ```
 
 ## 感谢以下项目
