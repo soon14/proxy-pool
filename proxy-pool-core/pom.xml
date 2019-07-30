@@ -17,6 +17,41 @@
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--webmagic start -->
+        <dependency>
+            <groupId>io.github.harvies</groupId>
+            <artifactId>webmagic-core</artifactId>
+            <version>${webmagic.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-log4j12</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>io.github.harvies</groupId>
+            <artifactId>webmagic-extension</artifactId>
+            <version>${webmagic.version}</version>
+        </dependency>
+        <!-- httpclient依赖-->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>${commons-logging.version}</version>
+        </dependency>
+        <!--webmagic end -->
+        <dependency>
+            <groupId>net.dongliu</groupId>
+            <artifactId>requests</artifactId>
+        </dependency>
+
     </dependencies>
 
 
