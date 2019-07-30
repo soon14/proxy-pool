@@ -62,11 +62,9 @@ http://frp.harvies.ml:22227/proxy/list
 ## docker打包
 
 ```bash
-
-rm -rf ~/.m2/repository/io/github/harvies/
- 
+# rm -rf ~/.m2/repository/io/github/harvies/
 sudo mvn clean install -DskipTests
-
+cd proxy-pool-web
 sudo mvn  clean package  dockerfile:build -DskipTests -Ptest
 ```
 
