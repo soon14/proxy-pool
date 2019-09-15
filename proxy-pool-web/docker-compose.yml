@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  proxy-pool-web:
+    environment:
+      MONGODB_HOST: mongodb
+    ports:
+      - "9002:9002"
+    image: io.github.harvies/proxy-pool-web:latest
+    links:
+      - mongodb
+  mongodb:
+    image: mongo
+    ports:
+      - "3308:3306"

@@ -5,4 +5,5 @@ EXPOSE 9002
 ARG JAR_FILE
 WORKDIR /opt
 COPY ${JAR_FILE} proxy-pool.jar
+ENV MONGODB_HOST localhost
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-Xms128m", "-Xmx256m","-jar","/opt/proxy-pool.jar"]
